@@ -1,0 +1,335 @@
+.yt-notes-container {
+  margin: 20px 0;
+  padding: 6px 16px;
+  background: #f9f9f9 !important;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  max-width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  position: relative !important;
+  z-index: 1000 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.yt-notes-container.jumping {
+  animation: highlight 0.5s ease;
+}
+
+@keyframes highlight {
+  0%, 100% { background-color: #f9f9f9; }
+  50% { background-color: #fff3cd; }
+}
+
+.yt-notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.yt-notes-header-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.yt-notes-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #030303;
+  flex: 1;
+}
+
+.yt-notes-toggle {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #606060;
+  transition: all 0.2s ease;
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yt-notes-toggle:hover {
+  background: #f0f0f0;
+  border-color: #d0d0d0;
+}
+
+.yt-notes-add-button {
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.yt-notes-add-button:hover {
+  background: #cc0000;
+}
+
+.yt-notes-add-button:active {
+  background: #990000;
+}
+
+.yt-notes-empty {
+  text-align: center;
+  color: #606060;
+  font-size: 14px;
+}
+
+.yt-notes-empty p {
+  margin: 0 0 6px 0;
+}
+
+.yt-notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.yt-notes-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.2s ease;
+}
+
+.yt-notes-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yt-notes-timestamp {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.yt-notes-timestamp:hover {
+  background: #cc0000;
+}
+
+.yt-notes-timestamp:active {
+  background: #990000;
+}
+
+.yt-notes-text {
+  flex: 1;
+  font-size: 14px;
+  color: #030303;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.yt-notes-delete {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: #606060;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.yt-notes-delete:hover {
+  background: #f0f0f0;
+  color: #ff0000;
+}
+
+.yt-notes-delete:active {
+  background: #e0e0e0;
+}
+
+/* メモ追加フォーム */
+.yt-notes-add-form {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #ff0000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yt-notes-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.yt-notes-form-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #030303;
+}
+
+.yt-notes-form-close {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #606060;
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.yt-notes-form-close:hover {
+  background: #f0f0f0;
+}
+
+.yt-notes-form-info {
+  padding: 3px 12px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.yt-notes-form-info-item {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.yt-notes-form-info-item .label {
+  font-weight: 600;
+  color: #606060;
+}
+
+.yt-notes-form-info-item .value {
+  color: #030303;
+}
+
+.yt-notes-form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 60px;
+  height: 60px;
+  margin-bottom: 6px;
+  box-sizing: border-box;
+}
+
+.yt-notes-form-textarea:focus {
+  outline: none;
+  border-color: #ff0000;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1);
+}
+
+.yt-notes-form-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.yt-notes-form-save {
+  padding: 8px 16px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.yt-notes-form-save:hover:not(:disabled) {
+  background: #cc0000;
+}
+
+.yt-notes-form-save:active:not(:disabled) {
+  background: #990000;
+}
+
+.yt-notes-form-save:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.yt-notes-form-cancel {
+  padding: 8px 16px;
+  background: transparent;
+  color: #606060;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.yt-notes-form-cancel:hover {
+  background: #f0f0f0;
+  border-color: #d0d0d0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .yt-notes-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .yt-notes-timestamp {
+    align-self: flex-start;
+  }
+  
+  .yt-notes-form-actions {
+    flex-direction: column;
+  }
+  
+  .yt-notes-form-save,
+  .yt-notes-form-cancel {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Timestamped Notes</title>
+  <link rel="stylesheet" href="../css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 メモを追加</h1>
+    <div id="status" class="status"></div>
+    <div class="info-section">
+      <div class="info-item">
+        <span class="label">動画:</span>
+        <span id="videoTitle" class="value">-</span>
+      </div>
+      <div class="info-item">
+        <span class="label">現在時刻:</span>
+        <span id="currentTime" class="value">-</span>
+      </div>
+    </div>
+    <div class="form-section">
+      <label for="noteText">メモ内容:</label>
+      <textarea id="noteText" placeholder="メモを入力してください..." rows="4"></textarea>
+      <button id="saveButton" class="save-button">💾 メモを保存</button>
+    </div>
+  </div>
+  <script src="../js/popup.js"></script>
+</body>
+</html>
+
